@@ -1,9 +1,11 @@
 import { Component } from "react";
 import { v4 as uuid } from "uuid";
+import s from "./ContactForm.module.scss";
 
 const INITIAL_STATE = {
-  number: "",
+  email: "",
   name: "",
+  message: "",
 };
 
 class ContactForm extends Component {
@@ -19,18 +21,18 @@ class ContactForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { name, number } = this.state;
+    const { name, email, message } = this.state;
     const { onAdd } = this.props;
     const isValidateForm = this.validateForm();
     if (!isValidateForm) return;
-    onAdd({ id: uuid(), name, number });
+    onAdd({ id: uuid(), name, email, message });
     this.resetForm();
   };
 
   validateForm = () => {
-    const { name, number } = this.state;
+    const { name, email, message } = this.state;
     const { onCheckUnique } = this.props;
-    if (!name || !number) {
+    if (!name || !email || !message) {
       alert("Some field is empty");
       return false;
     }
@@ -42,37 +44,54 @@ class ContactForm extends Component {
   };
 
   render() {
-    const { name, number } = this.state;
+    const { name, email, message } = this.state;
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          <p>
-            <b>Name</b>
-          </p>
-          <br />
-          <input
-            type="text"
-            value={name}
-            name="name"
-            onChange={this.handleInputChange}
-          />
-        </label>
-        <br />
-        <label>
-          <p>
-            <b>Number</b>
-          </p>
-          <br />
-          <input
-            type="tel"
-            value={number}
-            name="number"
-            onChange={this.handleInputChange}
-          />
-        </label>
-        <br />
-        <button type="submit">Add contact</button>
-      </form>
+      <div className={s.formReach}>
+        <h1 className={s}>Reach out to us!</h1>
+        <div className={s.formInputs}>
+          <form onSubmit={this.handleSubmit}>
+            <label className={s.label}>
+              <br />
+              <input
+                className={s.input}
+                type="text"
+                value={name}
+                name="name"
+                placeholder="Your name *"
+                onChange={this.handleInputChange}
+              />
+            </label>
+            <br />
+            <label className={s.label}>
+              <br />
+              <input
+                className={s.input}
+                type="email"
+                value={email}
+                name="email"
+                placeholder="Your e-mail *"
+                onChange={this.handleInputChange}
+              />
+            </label>
+            <br />
+            <label className={s.label}>
+              <br />
+              <input
+                className={s.input}
+                type="text"
+                value={message}
+                name="message"
+                placeholder="Your message *"
+                onChange={this.handleInputChange}
+              />
+            </label>
+            <br />
+            <button className={s.button} type="submit">
+              Send message
+            </button>
+          </form>
+        </div>
+      </div>
     );
   }
 }

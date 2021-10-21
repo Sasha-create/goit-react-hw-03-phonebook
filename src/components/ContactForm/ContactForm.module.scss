@@ -1,0 +1,175 @@
+@import "../../styles/variables";
+@import "../../styles/size";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 563px;
+  height: 575px;
+  margin-left: 147px;
+  margin-right: auto;
+
+  /* margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  border-radius: 30px;
+  box-shadow: 5px 10px 20px rgba(170, 178, 197, 0.4); */
+
+  @include size(mobile) {
+    width: 300px;
+  }
+
+  @include size(tablet) {
+    margin-top: 240px;
+    width: 436px;
+  }
+
+  @include size(desktop) {
+    margin-top: 117px;
+    margin-left: auto;
+    margin-right: 110px;
+  }
+}
+
+.formHeader {
+  font-family: "Apercu Arabic Pro";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 52px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  @include size(tablet) {
+    margin-left: 86px;
+    font-size: 28px;
+  }
+}
+
+.formReach {
+  display: flex;
+  flex-direction: column;
+  width: 563px;
+  height: 575px;
+  margin-left: 147px;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+/* .title {
+  margin-left: 29px;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+  color: $orange;
+
+  @include size(tablet) {
+    margin-left: 86px;
+    font-size: 28px;
+  }
+}
+
+.text {
+  margin-top: 40px;
+  margin-left: 29px;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  color: $main-text-cl;
+
+  @include size(tablet) {
+    margin-left: 86px;
+    margin-right: 85px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+.textGoogle {
+  @extend .text;
+  margin-top: 30px;
+
+  @include size(tablet) {
+    text-align: left;
+  }
+} */
+
+.label {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /* margin-top: 25px;
+  margin-left: 29px; */
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  color: black;
+
+  /* @include size(tablet) {
+    margin-left: 86px;
+    font-size: 12px;
+    line-height: 14px;
+  } */
+}
+
+.input {
+  width: 557px;
+  height: 93px;
+  margin-top: 8px;
+  margin-bottom: auto;
+  /* margin-top: 12px;
+  padding-left: 20px;
+  padding-right: 20px; */
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  box-sizing: border-box;
+  border-radius: 10px;
+  /* 
+  @include size(tablet) {
+    width: 225px;
+  }
+
+  @include size(desktop) {
+    width: 265px;
+  } */
+}
+::placeholder {
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  color: gray;
+}
+/* 
+  &:hover,
+  &:focus {
+    border-color: $orange;
+    box-shadow: 1px 3px 5px rgba(255, 107, 8, 0.35);
+  } */
+
+/* 
+.formRegistGoogle {
+  width: 18px;
+  height: 18px;
+  padding: auto;
+  margin-left: auto;
+  margin-right: 10px;
+}
+/* */
+
+.button {
+  text-align: center;
+  width: 218px;
+  height: 73px;
+  left: 150px;
+  top: 681px;
+
+  background: #fad34f;
+  border-radius: 500px;
+}

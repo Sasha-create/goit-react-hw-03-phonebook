@@ -1,0 +1,117 @@
+@import "../../styles/variables";
+@import "../../styles/size";
+
+// .container {
+//   display: flex;
+//   width: 100%;
+//   background: #fafafa;
+// }
+.container {
+  position: relative;
+  display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  width: calc(100% / 2 - 20px);
+  margin-left: auto;
+  margin-right: auto;
+  // max-width: 100%;
+  height: 100vh;
+
+  // background-position: center;
+  // background-size: 342px;
+  // background-repeat: inherit;
+
+  @media screen and (orientation: landscape) and (max-width: 768px - 1) {
+    height: 200vh;
+  }
+
+  @include size(mobile) {
+    width: 100%;
+  }
+
+  @include size(desktop) {
+    width: 1280px;
+    height: 100vh;
+  }
+}
+
+.Box {
+  position: absolute;
+  display: block;
+  // top: 30%;
+  // left: 90%;
+  // transform: translate(-30%, -90%);
+  max-width: 100%;
+  height: auto;
+  left: 324px;
+  top: -28px;
+  margin-left: 324px;
+  margin-right: 0;
+  background: url(../../images/city-map.png);
+}
+
+// .Box img {
+//   position: absolute;
+//   top: 130%;
+//   left: 120%;
+//   transform: translate(-130%, -120%);
+//   width: calc(100% / 2 - 20px);
+//   // width: 976px;
+//   // height: 976px;
+//   border-radius: 50%;
+//   object-fit: cover;
+//   // background-color: #fff;
+
+//   // @include size(mobile) {
+//   //   width: 976px;
+//   //   height: 976px;
+//   // }
+
+//   // @include size(tablet) {
+//   //   width: 976px;
+//   //   height: 976px;
+//   // }
+
+//   @include size(desktop) {
+//     width: 976px;
+//     height: 976px;
+//   }
+// }
+/* .box {
+  position: relative;
+  overflow: hidden;
+  width: 976px;
+  height: 976px;
+  
+}
+.box img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 976px;
+  height: 976px;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 99;
+} */
+/* .formMape {
+  width: 976px;
+  height: 976px;
+  /* object-fit: cover; */
+/* border-radius: 50%;
+  background: url(/src/images/city-map.png) no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-left: 200px;
+} */
+/* .white {
+  width: 400px;
+  height: 400px;
+  background: #fff;
+} */
+/* .gray {
+  width: 1400px;
+  height: 400px;
+  background: #e5e5e5;
+} */

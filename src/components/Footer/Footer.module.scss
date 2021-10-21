@@ -1,0 +1,46 @@
+@import "../../styles/variables";
+@import "../../styles/size";
+
+.footerClass {
+  width: auto;
+  height: 200px;
+  background: #fafafa;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #d8d8d8;
+  box-sizing: border-box;
+
+  @include size(mobile-only) {
+    display: none;
+  }
+}
+
+/* .footerClass {
+  width: 100%;
+  background: $gray-back;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #d8d8d8;
+  box-sizing: border-box;
+  /* 
+  @include size(mobile-only) {
+    display: none;
+  } */
+
+/* .link {
+  display: inline-block;
+}
+
+.icon {
+} */
+
+/* .list {
+  display: flex;
+  width: calc((100% - 100px) / 2);
+  justify-content: space-evenly;
+  &:nth-child(even) {
+    transform: rotate(180deg);
+  }
+} */
